@@ -18,6 +18,10 @@ const connection = async () => {
     console.log(err);
   }
 };
+
+app.get("/",(req ,res)=>{
+  res.send("welcome to Homepage")
+})
 //if sombody want to visit /user Route use userRouter
 app.use("/user",userRouter)
 //if sombody want to visit /post Route use postRouter
