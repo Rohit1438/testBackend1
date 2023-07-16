@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const userRouter=require("./Routes/userRouter");
-const router = require("./Routes/PostRoute");
+const postRouter = require("./Routes/postRoute");
 
 
 
@@ -25,7 +25,7 @@ app.get("/",(req ,res)=>{
 //if sombody want to visit /user Route use userRouter
 app.use("/user",userRouter)
 //if sombody want to visit /post Route use postRouter
-app.use("/post",router)
+app.use("/post",postRouter)
 app.listen(8080, async () => {
     connection();
     console.log("Listening on port 8080");
